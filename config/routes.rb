@@ -1,11 +1,22 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/help"
+  get "users/new"
 
-  get "static_pages/about"
+  root "static_pages#home"
 
-  get "static_pages/contact"
+  match "/help", to: "static_pages#help", via: "get"
+  
+  match "/about", to: "static_pages#about", via: "get"
+
+  match "/contact", to: "static_pages#contact", via: "get"
+
+  match "/signup", to: "users#new", via: "get"
+
+
+  # ejemplo de como era un routes generico antes de cambiarlo por match...   get "static_pages/home"
+  #                                                                           get "static_pages/help" 
+ 
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
