@@ -17,7 +17,6 @@ gem 'railties', '4.0.2'
 
 group :development, :test do
     #gem 'sqlite3', '1.3.8'
-    gem 'pg', '0.17.0'
     gem 'rspec-rails'
     gem 'guard-rspec', '2.5.0'
     gem 'guard-spork', '1.5.0'  
