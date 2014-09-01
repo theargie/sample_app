@@ -11,6 +11,8 @@ gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
 gem 'actionpack', '4.0.2'
 gem 'railties', '4.0.2'
+gem 'pg', '0.15.1'
+gem 'rails_12factor', '0.0.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -22,8 +24,7 @@ group :development, :test do
     gem 'guard-spork', '1.5.0'  
     gem 'childprocess', '0.3.6'
     gem 'spork-rails', '4.0.0'
-    gem 'pg', '0.15.1'
-    gem 'rails_12factor', '0.0.2'
+    
 end
 
 group :development do
