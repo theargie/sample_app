@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   root "static_pages#home"
 
@@ -11,6 +12,10 @@ SampleApp::Application.routes.draw do
   match "/contact", to: "static_pages#contact", via: "get"
 
   match "/signup", to: "users#new", via: "get"
+
+  match "/signin", to: "sessions#new", via: "get"
+
+  match "/signout", to: "sessions#destroy", via: "delete"
 
 
   # ejemplo de como era un routes generico antes de cambiarlo por match...   get "static_pages/home"
